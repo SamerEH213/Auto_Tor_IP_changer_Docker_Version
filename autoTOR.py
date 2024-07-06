@@ -67,8 +67,10 @@ os.system("service tor start")
 time.sleep(3)
 print("\033[1;32;40m change your  SOCKES to 127.0.0.1:9050 \n")
 os.system("service tor start")
-x = input("[+] time to change Ip in Sec [type=60] >> ")
-lin = input("[+] how many time do you want to change your ip [type=1000]for infinte ip change type [0] >>")
+#x = input("[+] time to change Ip in Sec [type=60] >> ")
+#lin = input("[+] how many time do you want to change your ip [type=1000]for infinte ip change type [0] >>")
+x = os.getenv("TIME_CHNAGE_IP")
+lin= os.getenv("MANY_TIME_CHNAGE_IP")
 if int(lin) ==int(0):
 
 	while True:
